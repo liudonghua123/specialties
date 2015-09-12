@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">特产.特卖</string>
+
+    <string name="action_settings">设置</string>
+    <string name="title_activity_welcome">欢迎</string>
+
+    <string name="splash_content_1">特产.特卖</string>
+    <string name="splash_content_2">高质量\n严要求</string>
+    <string name="splash_content_3">文化\n扫二维码</string>
+    <string name="splash_button_text">开启特产之旅</string>
+    <string name="main_title">主页</string>
+    <string name="startup_text">欢迎使用特色特长应用</string>
+    <string name="home_text_1">主页</string>
+    <string name="home_text_2">特卖论坛</string>
+    <string name="home_text_3">购物车</string>
+    <string name="home_text_4">我的</string>
+
+    <string-array name="splash_content">
+        <item>@string/splash_content_1</item>
+        <item>@string/splash_content_2</item>
+        <item>@string/splash_content_3</item>
+    </string-array>
+
+    <array name="splash_background_image">
+        <item>@drawable/bg_1</item>
+        <item>@drawable/bg_2</item>
+        <item>@drawable/bg_3</item>
+    </array>
+
+</resources>
