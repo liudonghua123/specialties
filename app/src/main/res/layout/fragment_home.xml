@@ -7,8 +7,7 @@
     <TableLayout
         android:id="@+id/home_bottom_container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/home_bottom_bg_color"
+        android:layout_height="@dimen/home_bottombar_height"
         android:stretchColumns="0,1,2,3"
         android:layout_alignParentBottom="true">
         <TableRow
@@ -20,7 +19,7 @@
             <ImageButton
                 android:id="@+id/home_bottom_main_button"
                 style="@style/home_icon"
-                android:src="@drawable/home_icon_1"/>
+                android:src="@drawable/home"/>
             <TextView
                 style="@style/home_text"
                 android:text="@string/home_text_1"/>
@@ -31,7 +30,7 @@
             <ImageButton
                 android:id="@+id/home_bottom_forum_button"
                 style="@style/home_icon"
-                android:src="@drawable/home_icon_2"/>
+                android:src="@drawable/forum"/>
             <TextView
                 style="@style/home_text"
                 android:text="@string/home_text_2"/>
@@ -42,7 +41,7 @@
             <ImageButton
                 android:id="@+id/home_bottom_shoppingcart_button"
                 style="@style/home_icon"
-                android:src="@drawable/home_icon_3"/>
+                android:src="@drawable/shoppingcart"/>
             <TextView
                 style="@style/home_text"
                 android:text="@string/home_text_3"/>
@@ -53,7 +52,7 @@
             <ImageButton
                 android:id="@+id/home_bottom_profile_button"
                 style="@style/home_icon"
-                android:src="@drawable/home_icon_4"/>
+                android:src="@drawable/profile"/>
             <TextView
                 style="@style/home_text"
                 android:text="@string/home_text_4"/>

@@ -47,7 +47,7 @@ public class MainActivity extends SlidingFragmentActivity {
 
         // customize the SlidingMenu
         SlidingMenu menu = getSlidingMenu();
-        menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
+        menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_MARGIN);
         menu.setBehindWidthRes(R.dimen.menu_width);
 
     }

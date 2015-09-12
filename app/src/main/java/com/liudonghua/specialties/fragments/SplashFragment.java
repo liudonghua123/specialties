@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.liudonghua.specialties.MainActivity;
+import com.liudonghua.specialties.MapActivity;
 import com.liudonghua.specialties.R;
 import com.liudonghua.specialties.SpecialtiesApplication;
 import com.liudonghua.specialties.utils.Constant;
