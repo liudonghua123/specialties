@@ -4,86 +4,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/home_toolbar_height"
-        android:layout_margin="@dimen/default_minimum_gap">
-
-        <ImageButton
-            android:layout_width="@dimen/default_toolbar_icon_width"
-            android:layout_height="@dimen/default_toolbar_icon_height"
-            android:layout_alignParentLeft="true"
-            android:scaleType="centerInside"
-            android:src="@drawable/menu" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="@string/home_main_title"
-            android:textSize="@dimen/default_title_text_size" />
-
-        <ImageButton
-            android:layout_width="@dimen/default_toolbar_icon_width"
-            android:layout_height="@dimen/default_toolbar_icon_height"
-            android:layout_alignParentRight="true"
-            android:scaleType="centerInside"
-            android:src="@drawable/search" />
-    </RelativeLayout>
-
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/default_gap">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-            <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/home_topbar_height"
-                android:stretchColumns="0,1,2">
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <LinearLayout style="@style/home_topbar_column_container">
-
-                        <ImageView
-                            style="@style/home_topbar_column_imageview"
-                            android:src="@drawable/friend" />
-
-                        <TextView
-                            style="@style/home_topbar_column_textview"
-                            android:text="@string/home_main_friend" />
-                    </LinearLayout>
-
-                    <LinearLayout style="@style/home_topbar_column_container">
-
-                        <ImageView
-                            style="@style/home_topbar_column_imageview"
-                            android:src="@drawable/camera" />
-
-                        <TextView
-                            style="@style/home_topbar_column_textview"
-                            android:text="@string/home_main_camera" />
-                    </LinearLayout>
-
-                    <LinearLayout style="@style/home_topbar_column_container">
-
-                        <ImageView
-                            style="@style/home_topbar_column_imageview"
-                            android:src="@drawable/share" />
-
-                        <TextView
-                            style="@style/home_topbar_column_textview"
-                            android:text="@string/home_main_share" />
-                    </LinearLayout>
-                </TableRow>
-            </TableLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -107,11 +35,59 @@
                     />
             </RelativeLayout>
 
-            <ListView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="@dimen/home_topbar_height"
+                android:orientation="horizontal" >
 
-            </ListView>
+                    <LinearLayout style="@style/home_topbar_column_container">
+
+                        <ImageView
+                            style="@style/home_topbar_column_imageview"
+                            android:src="@mipmap/friends" />
+
+                        <TextView
+                            style="@style/home_topbar_column_textview"
+                            android:text="@string/home_main_friend" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/home_topbar_column_container">
+
+                        <ImageView
+                            style="@style/home_topbar_column_imageview"
+                            android:src="@mipmap/qrcode" />
+
+                        <TextView
+                            style="@style/home_topbar_column_textview"
+                            android:text="@string/home_main_camera" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/home_topbar_column_container">
+
+                        <ImageView
+                            style="@style/home_topbar_column_imageview"
+                            android:src="@mipmap/share" />
+
+                        <TextView
+                            style="@style/home_topbar_column_textview"
+                            android:text="@string/home_main_share" />
+                    </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300px"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/sample_1"
+                android:layout_margin="@dimen/default_gap"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="550px"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/sample_2"
+                android:layout_margin="@dimen/default_gap"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

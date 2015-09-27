@@ -6,33 +6,43 @@ import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.liudonghua.specialties.MainActivity;
 import com.liudonghua.specialties.R;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 /**
  * Created by liudonghua on 9/10/15.
  */
-public class MenuFragment extends ListFragment {
+public class MenuFragment extends Fragment implements  ListView.OnItemClickListener{
+
+    @Bind(R.id.menu_listview)
+    ListView mMenuListView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.menu_list, null);
+        View view = inflater.inflate(R.layout.menu_list, null);
+        ButterKnife.bind(this, view);
+        return view;
     }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         String[] menus = getResources().getStringArray(R.array.menu_names);
-        ArrayAdapter<String> colorAdapter = new ArrayAdapter<String>(getActivity(),
+        ArrayAdapter<String> menuItemAdapter = new ArrayAdapter<String>(getActivity(),
                 android.R.layout.simple_list_item_1, android.R.id.text1, menus);
-        setListAdapter(colorAdapter);
+        mMenuListView.setAdapter(menuItemAdapter);
+        mMenuListView.setOnItemClickListener(this);
     }
 
     @Override
-    public void onListItemClick(ListView lv, View v, int position, long id) {
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Fragment contentFragment = null;
         switch (position) {
             case 0:
@@ -48,8 +58,9 @@ public class MenuFragment extends ListFragment {
                 contentFragment = new AboutFragment();
                 break;
         }
-        if (contentFragment != null)
+        if (contentFragment != null) {
             switchFragment(contentFragment);
+        }
     }
 
     private void switchFragment(Fragment fragment) {

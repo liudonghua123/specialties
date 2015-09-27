@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/profile_bg" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_fake_actionbar_height"
+        android:gravity="center_vertical">
+        <Button
+            android:layout_width="@dimen/default_actionbar_button_width"
+            android:layout_height="@dimen/default_actionbar_button_height"
+            android:layout_marginLeft="10dp"
+            android:background="@mipmap/back"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:gravity="center"
+        android:text="@string/profile_regist"
+        android:textColor="#993300"
+        android:textSize="20sp"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:stretchColumns="1">
+        <TableRow>
+            <TextView
+                android:text="@string/profile_regist_phonenumber"
+                android:textColor="#993300"
+                android:textSize="15sp"/>
+            <EditText />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="@string/profile_regist_captcha"
+                android:textColor="#993300"
+                android:textSize="15sp"/>
+            <EditText />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="@string/profile_regist_password"
+                android:textColor="#993300"
+                android:textSize="15sp"/>
+            <EditText />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="@string/profile_regist_repassword"
+                android:textColor="#993300"
+                android:textSize="15sp"/>
+            <EditText />
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/profile_login_login"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:background="@color/white"
+        android:text="@string/profile_regist"
+        android:textColor="#993300"
+        android:textSize="18dp" />
+
+    <Button
+        android:id="@+id/profile_regist_login"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:background="@color/white"
+        android:text="@string/profile_regist_quick_login"
+        android:textColor="#993300"
+        android:textSize="18dp" />
+
+</LinearLayout>

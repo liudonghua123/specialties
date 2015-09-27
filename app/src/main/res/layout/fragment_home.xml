@@ -4,58 +4,100 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/home_actionbar_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_fake_actionbar_height">
+        <Button
+            android:id="@+id/home_actionbar_home_button"
+            android:layout_width="@dimen/default_actionbar_button_width"
+            android:layout_height="@dimen/default_actionbar_button_height"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/home"
+            android:layout_marginLeft="@dimen/default_gap"/>
+
+        <TextView
+            android:id="@+id/home_title_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/home_title_1"
+            android:textSize="@dimen/default_header_title_font_size"
+            android:textColor="@color/title_text_color"/>
+
+        <Button
+            android:id="@+id/home_actionbar_search_button"
+            android:layout_width="@dimen/default_actionbar_button_width"
+            android:layout_height="@dimen/default_actionbar_button_height"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:background="@mipmap/search"
+            android:layout_marginRight="@dimen/default_gap"/>
+    </RelativeLayout>
+
     <TableLayout
         android:id="@+id/home_bottom_container"
         android:layout_width="match_parent"
         android:layout_height="@dimen/home_bottombar_height"
-        android:stretchColumns="0,1,2,3"
+        android:stretchColumns="0,1,2,3,4"
         android:layout_alignParentBottom="true">
         <TableRow
             android:layout_width="fill_parent"
             android:layout_height="wrap_content" >
         <LinearLayout
+            android:id="@+id/home_bottom_main"
             android:layout_column="0"
             style="@style/home_bottom_container">
-            <ImageButton
-                android:id="@+id/home_bottom_main_button"
+            <ImageView
                 style="@style/home_icon"
-                android:src="@drawable/home"/>
+                android:src="@drawable/home_bottombar_selector_home"/>
             <TextView
                 style="@style/home_text"
-                android:text="@string/home_text_1"/>
+                android:text="@string/home_bottombar_text_main"/>
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/home_bottom_location"
             android:layout_column="1"
             style="@style/home_bottom_container">
-            <ImageButton
-                android:id="@+id/home_bottom_forum_button"
+            <ImageView
                 style="@style/home_icon"
-                android:src="@drawable/forum"/>
+                android:src="@drawable/home_bottombar_selector_location"/>
             <TextView
                 style="@style/home_text"
-                android:text="@string/home_text_2"/>
+                android:text="@string/home_bottombar_text_location"/>
         </LinearLayout>
+            <LinearLayout
+                android:id="@+id/home_bottom_share"
+                android:layout_column="1"
+                style="@style/home_bottom_container">
+                <ImageView
+                    style="@style/home_icon"
+                    android:src="@drawable/home_bottombar_selector_share"/>
+                <TextView
+                    style="@style/home_text"
+                    android:text="@string/home_bottombar_text_share"/>
+            </LinearLayout>
         <LinearLayout
+            android:id="@+id/home_bottom_shoppingcart"
             android:layout_column="2"
             style="@style/home_bottom_container">
-            <ImageButton
-                android:id="@+id/home_bottom_shoppingcart_button"
+            <ImageView
                 style="@style/home_icon"
-                android:src="@drawable/shoppingcart"/>
+                android:src="@drawable/home_bottombar_selector_shoppingcart"/>
             <TextView
                 style="@style/home_text"
-                android:text="@string/home_text_3"/>
+                android:text="@string/home_bottombar_text_shoppingcart"/>
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/home_bottom_profile"
             android:layout_column="3"
             style="@style/home_bottom_container">
-            <ImageButton
-                android:id="@+id/home_bottom_profile_button"
+            <ImageView
                 style="@style/home_icon"
-                android:src="@drawable/profile"/>
+                android:src="@drawable/home_bottombar_selector_profile"/>
             <TextView
                 style="@style/home_text"
-                android:text="@string/home_text_4"/>
+                android:text="@string/home_bottombar_text_profile"/>
         </LinearLayout>
         </TableRow>
     </TableLayout>
@@ -63,6 +105,7 @@
         android:id="@+id/home_main_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@id/home_actionbar_container"
         android:layout_above="@id/home_bottom_container">
     </FrameLayout>
 </RelativeLayout>

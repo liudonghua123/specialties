@@ -17,6 +17,7 @@ public class HomeShoppingcartFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ((HomeFragment)getParentFragment()).setTitle(R.string.home_bottombar_text_shoppingcart);
     }
 
     @Nullable

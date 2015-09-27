@@ -1,5 +1,7 @@
 apply plugin: 'com.android.application'
 //apply plugin: 'com.neenbedankt.android-apt'
+// https://github.com/tmiyamon/gradle-mdicons
+apply plugin: 'com.tmiyamon.mdicons'
 
 android {
     compileSdkVersion 23
@@ -25,6 +27,8 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile project(":slidingmenu_library")
     compile 'com.android.support:appcompat-v7:23.0.1'
+    compile 'com.android.support:cardview-v7:23.0.+'
+    compile 'com.android.support:recyclerview-v7:23.0.+'
     // No resource found that matches the given name (at 'android:textColorLink' with value '@color/link_text_material_light').
     //compile 'com.github.jjhesk:BringItBackAdvanceSlidingMenu:1.6.7'
     // https://jitpack.io/#JakeWharton/ViewPagerIndicator/2.4.1
@@ -36,4 +40,21 @@ dependencies {
     compile 'com.jakewharton:butterknife:7.0.1'
     //compile 'com.jakewharton:butterknife:7.0.2-SNAPSHOT'
     //apt 'com.jakewharton:butterknife-compiler:7.0.2-SNAPSHOT'
+}
+
+mdicons {
+    defcolor 'mycolor', '#9804d9'
+
+    assets {
+        action_icons {
+            colors "black"
+            sizes  "48dp"
+            names  "chevron_left", "search", "chevron_right"
+        }
+        icons {
+            colors "black"
+            sizes  "48dp"
+            names  "face"
+        }
+    }
 }

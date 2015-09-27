@@ -12,16 +12,17 @@ import com.liudonghua.specialties.R;
 /**
  * Created by liudonghua on 9/10/15.
  */
-public class HomeForumFragment extends Fragment {
+public class HomeShareFragment extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ((HomeFragment)getParentFragment()).setTitle(R.string.home_bottombar_text_share);
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_home_forum, null);
+        return inflater.inflate(R.layout.fragment_home_share, null);
     }
 }

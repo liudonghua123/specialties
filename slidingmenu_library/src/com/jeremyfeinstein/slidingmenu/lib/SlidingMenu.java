@@ -1,7 +1,5 @@
 package com.jeremyfeinstein.slidingmenu.lib;
 
-import java.lang.reflect.Method;
-
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -15,20 +13,24 @@ import android.graphics.Point;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
-import android.os.Handler;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.Display;
+import android.view.KeyCharacterMap;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewConfiguration;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 
 import com.jeremyfeinstein.slidingmenu.lib.CustomViewAbove.OnPageChangeListener;
+
+import java.lang.reflect.Method;
 
 public class SlidingMenu extends RelativeLayout {
 
@@ -994,7 +996,11 @@ public class SlidingMenu extends RelativeLayout {
 		// https://github.com/jfeinstein10/SlidingMenu/issues/680
 		//int bottomPadding = insets.bottom;
 		int bottomPadding = insets.bottom;
-		if (Build.VERSION.SDK_INT >= 21) {
+		// check whether the navigation bar exists
+		// http://stackoverflow.com/questions/16092431/check-for-navigation-bar
+		if (Build.VERSION.SDK_INT >= 21
+				&& !ViewConfiguration.get(getContext()).hasPermanentMenuKey()
+				&& !KeyCharacterMap.deviceHasKey(KeyEvent.KEYCODE_BACK)) {
 			Resources resources = getContent().getResources();
 			int resourceId = resources.getIdentifier("navigation_bar_height", "dimen", "android");
 			if (resourceId > 0) {

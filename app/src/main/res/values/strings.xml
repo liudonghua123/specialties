@@ -2,6 +2,7 @@
     <string name="app_name">特产.特卖</string>
 
     <string name="action_settings">设置</string>
+    <string name="action_search">搜索</string>
     <string name="title_activity_welcome">欢迎</string>
 
     <string name="splash_content_1">特产.特卖</string>
@@ -10,10 +11,13 @@
     <string name="splash_button_text">开启特产之旅</string>
     <string name="main_title">主页</string>
     <string name="startup_text">欢迎使用特色特长应用</string>
-    <string name="home_text_1">主页</string>
-    <string name="home_text_2">论坛</string>
-    <string name="home_text_3">购物车</string>
-    <string name="home_text_4">我的</string>
+    <string name="home_bottombar_text_main">特卖会</string>
+    <string name="home_bottombar_text_location">特分布</string>
+    <string name="home_bottombar_text_share">特分享</string>
+    <string name="home_bottombar_text_shoppingcart">购物车</string>
+    <string name="home_bottombar_text_profile">我的特卖</string>
+    <string name="profile_login">登陆</string>
+    <string name="profile_regist">注册</string>
     <string name="home_main_title">特卖会</string>
 
     <string-array name="splash_content">
@@ -34,5 +38,47 @@
     <string name="home_main_friend">邀请好友</string>
     <string name="home_main_camera">扫码</string>
     <string name="home_main_share">分享</string>
+    <string name="click_to_login">点击登陆</string>
+    <string name="profile_my_order">我的订单</string>
+    <string name="profile_regist_phonenumber">手机号</string>
+    <string name="profile_regist_captcha">验证码</string>
+    <string name="profile_regist_password">密码</string>
+    <string name="profile_regist_repassword">确认密码</string>
+    <string name="profile_regist_quick_login">快速登陆</string>
+    <string name="profile_login_username">账户</string>
+    <string name="profile_login_password">密码</string>
+    <string name="profile_login_username_hint">手机号</string>
+    <string name="profile_login_password_hint">登陆密码</string>
+    <string name="profile_forget_password">忘记密码</string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="common_search">搜索</string>
+    <string name="home_title_1">特卖会</string>
+    <string name="menu_profile">我的</string>
+    <string name="menu_favorite">收藏</string>
+    <string name="location_subtitle">定位周围特产加盟商，查看各地特产分布</string>
+    <string name="location_button_text">进入特产商家名录</string>
+    <string name="share_post">发帖</string>
+    <string name="share_reply">回复</string>
+    <string name="share_special_offer">特卖达人</string>
+    <string name="share_hot_board">热门板块</string>
+    <string name="share_friends_status">好友互动和关注</string>
+    <string name="share_favour">赞</string>
+    <string name="share_comment">评论</string>
+    <string name="share_share">分享</string>
+    <string name="shoppingcart_empty_msg">购物车空空的</string>
+    <string name="shoppingcart_go_text">去逛逛</string>
+    <string name="app_special_offer">特卖会</string>
+    <string name="app_special_offer_slogan">高品质. 最地道. 承载文化</string>
+    <string name="profile_regist_phone_regist"><u>手机注册</u></string>
+    <string name="profile_login_thirdparty">第三方账号快速登陆</string>
+    <string name="profile_prepare_pay">待付款</string>
+    <string name="profile_prepare_receive">待收货</string>
+    <string name="profile_prepare_comment">待评论</string>
+    <string name="profile_my_account">我的账户</string>
+    <string name="profile_credit">积分</string>
+    <string name="profile_coupon">礼券</string>
+    <string name="profile_my_favour">我的收藏</string>
+    <string name="profile_my_service">特卖客服</string>
+    <string name="profile_about_specialties">关于特卖会</string>
 
 </resources>

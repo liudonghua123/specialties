@@ -6,7 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.liudonghua.specialties.R;
 
@@ -19,14 +19,17 @@ import butterknife.OnClick;
  */
 public class HomeFragment extends Fragment implements View.OnClickListener {
 
-    @Bind(R.id.home_bottom_main_button)
-    ImageButton buttonMain;
-    @Bind(R.id.home_bottom_forum_button)
-    ImageButton buttonForum;
-    @Bind(R.id.home_bottom_shoppingcart_button)
-    ImageButton buttonShoppingcart;
-    @Bind(R.id.home_bottom_profile_button)
-    ImageButton buttonProfile;
+//    @Bind(R.id.home_bottom_main)
+//    LinearLayout buttonMain;
+//    @Bind(R.id.home_bottom_forum)
+//    LinearLayout buttonForum;
+//    @Bind(R.id.home_bottom_shoppingcart)
+//    LinearLayout buttonShoppingcart;
+//    @Bind(R.id.home_bottom_profile)
+//    LinearLayout buttonProfile;
+
+    @Bind(R.id.home_title_text_view)
+    TextView homeTitleTextView;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -46,21 +49,28 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         getChildFragmentManager().beginTransaction().replace(R.id.home_main_container, new HomeMainFragment()).commit();
     }
 
-    @OnClick({R.id.home_bottom_main_button, R.id.home_bottom_forum_button, R.id.home_bottom_shoppingcart_button, R.id.home_bottom_profile_button})
+    @OnClick({R.id.home_bottom_main, R.id.home_bottom_location, R.id.home_bottom_share, R.id.home_bottom_shoppingcart, R.id.home_bottom_profile})
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.home_bottom_main_button:
+            case R.id.home_bottom_main:
                 getChildFragmentManager().beginTransaction().replace(R.id.home_main_container, new HomeMainFragment()).commit();
                 break;
-            case R.id.home_bottom_forum_button:
-                getChildFragmentManager().beginTransaction().replace(R.id.home_main_container, new HomeForumFragment()).commit();
+            case R.id.home_bottom_location:
+                getChildFragmentManager().beginTransaction().replace(R.id.home_main_container, new HomeLocationFragment()).commit();
                 break;
-            case R.id.home_bottom_shoppingcart_button:
+            case R.id.home_bottom_share:
+                getChildFragmentManager().beginTransaction().replace(R.id.home_main_container, new HomeShareFragment()).commit();
+                break;
+            case R.id.home_bottom_shoppingcart:
                 getChildFragmentManager().beginTransaction().replace(R.id.home_main_container, new HomeShoppingcartFragment()).commit();
                 break;
-            case R.id.home_bottom_profile_button:
+            case R.id.home_bottom_profile:
                 getChildFragmentManager().beginTransaction().replace(R.id.home_main_container, new HomeProfileFragment()).commit();
                 break;
         }
+    }
+
+    public void setTitle(int resId) {
+        homeTitleTextView.setText(resId);
     }
 }

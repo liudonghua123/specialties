@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="home_bottom_bg_color">#fefffd</color>
+    <color name="title_text_color">#FF0000</color>
+    <color name="slide_menu_listitem_bg_color">#FF0000</color>
+    <color name="red">#FF0000</color>
+    <color name="transparent">#00000000</color>
+    <color name="white">#FFFFFF</color>
 </resources>
